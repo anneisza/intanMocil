@@ -83,7 +83,7 @@
             // Atur penundaan dalam milidetik (5000ms = 5 detik)
             setTimeout(function() {
                 audio.play();
-            }, 15000); 
+            }, 21000); 
         });
   // === MUSIC PLAYER ===
 const video = document.getElementById('mvVideo');
