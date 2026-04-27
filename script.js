@@ -76,6 +76,13 @@
   // Re-launch on double click
   document.addEventListener('dblclick', launchConfetti);
 
+  // Unmute setelah user pertama kali interaksi
+const bgMusic = document.getElementById('bgMusic');
+document.addEventListener('click', function() {
+  bgMusic.muted = false;
+  bgMusic.play();
+}, { once: true });
+
   // Tunggu hingga halaman selesai dimuat
         window.addEventListener('load', function() {
             var audio = document.getElementById('swim');
