@@ -76,22 +76,18 @@
   // Re-launch on double click
   document.addEventListener('dblclick', launchConfetti);
 
-  // Unmute setelah user pertama kali interaksi
-const bgMusic = document.getElementById('bgMusic');
-document.addEventListener('click', function() {
-  bgMusic.muted = false;
-  bgMusic.play();
-}, { once: true });
+// lagu awal
 
-  // Tunggu hingga halaman selesai dimuat
-        window.addEventListener('load', function() {
-            var audio = document.getElementById('swim');
-            
-            // Atur penundaan dalam milidetik (5000ms = 5 detik)
-            setTimeout(function() {
-                audio.play();
-            }, 21000); 
+    document.addEventListener("DOMContentLoaded", function() {
+        var lagu1 = document.getElementById('lagu1');
+        var lagu2 = document.getElementById('lagu2');
+
+        // Saat lagu 1 selesai, putar lagu 2
+        lagu1.addEventListener('ended', function() {
+            lagu2.play();
         });
+    });
+
   // === MUSIC PLAYER ===
 const video = document.getElementById('mvVideo');
 const albumArt = document.getElementById('albumArt');
