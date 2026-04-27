@@ -78,6 +78,16 @@
 
   // Tunggu hingga halaman selesai dimuat
         window.addEventListener('load', function() {
+            var audio = document.getElementById('swim3');
+            
+            // Atur penundaan dalam milidetik (5000ms = 5 detik)
+            setTimeout(function() {
+                audio.play();
+            }, 1000); 
+        });
+
+  // Tunggu hingga halaman selesai dimuat
+        window.addEventListener('load', function() {
             var audio = document.getElementById('swim');
             
             // Atur penundaan dalam milidetik (5000ms = 5 detik)
