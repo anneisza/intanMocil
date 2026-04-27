@@ -109,3 +109,18 @@ function togglePlay() {
     btn.textContent = '▶';
   }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lagu1 = document.getElementById('lagu1');
+  var lagu2 = document.getElementById('lagu2');
+
+  // Unmute dan play saat user pertama kali tap/klik
+  document.addEventListener('click', function() {
+    lagu1.muted = false;
+    lagu1.play();
+  }, { once: true });
+
+  lagu1.addEventListener('ended', function() {
+    lagu2.play();
+  });
+});
